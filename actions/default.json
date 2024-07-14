@@ -1,5 +1,36 @@
 [
     {
+        "name": "折磨难度",
+        "trigger":{
+            "text": "折磨难度",
+            "box": [1081, 1173, 82, 112],
+            "redundancy": 30
+        },
+        "actions":
+        [
+            {
+                "position": [1529, 884]
+            }
+        ]
+    },
+    {
+        "name": "差分宇宙外",
+        "trigger":{
+            "text": "差分宇宙",
+            "box": [1217, 1351, 589, 621],
+            "redundancy": 30
+        },
+        "actions":
+        [
+            {
+                "press": "f"
+            },
+            {
+                "sleep": 1
+            }
+        ]
+    },
+    {
         "name": "差分宇宙中",
         "trigger":{
             "text": "位面",
@@ -9,10 +40,10 @@
         "actions": ["area"]
     },
     {
-        "name": "差分宇宙外",
+        "name": "差分宇宙中",
         "trigger":{
-            "text": "长石号",
-            "box": [48, 135, 7, 31],
+            "text": "第",
+            "box": [58, 525, 9, 32],
             "redundancy": 30
         },
         "actions": ["area"]
@@ -28,6 +59,9 @@
         [
             {
                 "text": "开始游戏"
+            },
+            {
+                "sleep": 1
             }
         ]
     },
@@ -64,20 +98,6 @@
         ]
     },
     {
-        "name": "折磨难度",
-        "trigger":{
-            "text": "折磨难度",
-            "box": [1081, 1173, 82, 112],
-            "redundancy": 30
-        },
-        "actions":
-        [
-            {
-                "position": [1529, 884]
-            }
-        ]
-    },
-    {
         "name": "启动[差分宇宙]",
         "trigger":{
             "text": "启动",
@@ -89,6 +109,41 @@
             "select_difficulty",
             {
                 "text": "启动"
+            }
+        ]
+    },
+    {
+        "name": "本轮存档",
+        "trigger":{
+            "text": "本轮存档",
+            "box": [1635, 1723, 956, 984],
+            "redundancy": 30
+        },
+        "actions":
+        [
+            {
+                "press": "esc"
+            },
+            {
+                "sleep": 1
+            }
+        ]
+    },
+    {
+        "name": "存档管理",
+        "trigger":{
+            "text": "存档管理",
+            "box": [93, 193, 57, 85],
+            "redundancy": 30
+        },
+        "actions":
+        [
+            "select_save",
+            {
+                "text": "保存本轮数据"
+            },
+            {
+                "text": "覆盖存档"
             }
         ]
     },
@@ -135,7 +190,7 @@
             "box": [92, 195, 54, 88],
             "redundancy": 30
         },
-        "actions": ["event"]
+        "actions": ["event"] 
     },
     {
         "name": "奇物大转盘",
@@ -147,15 +202,61 @@
         "actions":
         [
             {
-                "text": "开始抽奖"
-            }
+                "press": "esc"
+            },
+            {
+                "sleep": "2"
+            },
+            "close_and_exit"
         ]
-    },  
+    },
     {
-        "name": "探索结束",
+        "name": "造物调试台",
         "trigger":{
-            "text": "返回主界面",
-            "box": [646, 767, 942, 966],
+            "text": "造物调试",
+            "box": [92, 216, 52, 89],
+            "redundancy": 30
+        },
+        "actions":
+        [
+            {
+                "press": "esc"
+            },
+            {
+                "sleep": "1"
+            },
+            {
+                "position": [1177, 672]
+            },
+            {
+                "sleep": "2"
+            },
+            "close_and_exit"
+        ]
+    },
+    {
+        "name": "角色重置",
+        "trigger":{
+            "text": "角色重置",
+            "box": [92, 196, 54, 86],
+            "redundancy": 30
+        },
+        "actions":
+        [
+            {
+                "press": "esc"
+            },
+            {
+                "sleep": "2"
+            },
+            "close_and_exit"
+        ]
+    },
+    {
+        "name": "已存档-返回",
+        "trigger":{
+            "text": "查看存档",
+            "box": [1144, 1248, 938, 971],
             "redundancy": 30
         },
         "actions":
@@ -164,6 +265,15 @@
                 "text": "返回主界面"
             }
         ]
+    },
+    {
+        "name": "探索结束",
+        "trigger":{
+            "text": "返回主界面",
+            "box": [646, 767, 942, 966],
+            "redundancy": 30
+        },
+        "actions": ["save_or_exit"]
     },
     {
         "name": "探索结束-失败",
@@ -197,20 +307,42 @@
         "name": "确认界面",
         "trigger":{ 
             "text": "确认",
-            "box": [1152, 1205, 648, 678],
+            "box": [1111, 1225, 750, 792],
             "redundancy": 30
         },
         "actions":
         [
             {
                 "text": "确认",
-                "box": [1152, 1205, 648, 678],
+                "box": [1111, 1225, 750, 792],
                 "redundancy": 30
+            },
+            {
+                "sleep": 1
             }
         ]
     },
     {
-        "name": "确认界面-退出并结算",
+        "name": "确认界面",
+        "trigger":{ 
+            "text": "确认",
+            "box": [1111, 1225, 648, 678],
+            "redundancy": 30
+        },
+        "actions":
+        [
+            {
+                "text": "确认",
+                "box": [1111, 1225, 648, 678],
+                "redundancy": 30
+            },
+            {
+                "sleep": 1
+            }
+        ]
+    },
+    {
+        "name": "确认界面",
         "trigger":{ 
             "text": "确认",
             "box": [1152, 1206, 756, 786],
@@ -222,6 +354,9 @@
                 "text": "确认",
                 "box": [1152, 1206, 756, 786],
                 "redundancy": 30
+            },
+            {
+                "sleep": 1
             }
         ]
     },
@@ -236,6 +371,9 @@
         [
             {
                 "text": "暂离"
+            },
+            {
+                "sleep": 3
             }
         ]
     },
@@ -316,9 +454,6 @@
             },
             {
                 "position": [1680, 527]
-            },
-            {
-                "sleep": 1
             }
         ]
     },
@@ -353,6 +488,57 @@
             },
             {
                 "sleep": 1
+            }
+        ]
+    },
+    {
+        "name": "月卡界面",
+        "trigger":{
+            "text": "今日补给",
+            "box": [852, 1052, 883, 922],
+            "redundancy": 60
+        },
+        "actions":
+        [
+            {
+                "text": "今日补给"
+            },
+            {
+                "sleep": 2
+            }
+        ]
+    },
+    { 
+        "name": "梦境护照",
+        "trigger":{
+            "text": "梦境护照",
+            "box": [69, 169, 209, 239],
+            "redundancy": 60
+        },
+        "actions":
+        [
+            {
+                "press": "esc"
+            },
+            {
+                "sleep": 1
+            }
+        ]
+    }, 
+    {
+        "name": "快速回复",
+        "trigger":{
+            "text": "快速回复",
+            "box": [885, 1016, 243, 279],
+            "redundancy": 60
+        },
+        "actions":
+        [
+            {
+                "position": [1188, 813]
+            },
+            {
+                "sleep": 2.5
             }
         ]
     }
